@@ -1,0 +1,145 @@
+.header {
+  margin: 0;
+  padding: 8px 20px 7px 15px;
+  background: $white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  box-shadow: 0px 2px 11px rgba($black, 0.07);
+  @extend .flex, %justify-between, %align-center;
+  .header-left {
+    @extend .flex, %align-center;
+    .logo {
+      // width: 160px;
+    }
+    .toggle-menu {
+      width: 32px;
+      height: 32px;
+      padding: 4px 6px;
+      cursor: pointer;
+      background: lighten($primary, 10%);
+      border: 0;
+      border-radius: 5px;
+      margin-right: 20px;
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #fff;
+        margin: 4px 0;
+        transition: all 0.3s ease-in-out 0s;
+        top: 0;
+        left: 0;
+        position: relative;
+        border-radius: 6px;
+        &:nth-child(1) {
+          transform-origin: center left;
+        }
+        &:nth-child(2) {
+          width: 80%;
+        }
+        &:nth-child(3) {
+          width: 60%;
+          transform-origin: bottom left;
+        }
+      }
+    }
+  }
+
+  .header-right {
+    @extend .flex;
+  }
+}
+.user-menu {
+  .user-icon-name {
+    color: $primary;
+    .user-icon {
+      font-size: 30px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    span {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+  .dropdown-toggle {
+    text-decoration: none;
+    color: $secondary;
+    font-size: 20px;
+    margin: 0;
+    padding: 0 10px;
+    &:after {
+      display: none;
+    }
+  }
+  .dropdown-menu {
+    border: 0;
+    margin-top: 10px !important;
+    box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.1), 0 2px 4px rgba(16, 22, 26, 0.2),
+      0 8px 24px rgba(16, 22, 26, 0.2);
+    right: 5px !important;
+    border-radius: 0;
+    left: auto !important;
+    transform: translate(0px, 34px) scale(0) !important;
+    transform-origin: right top;
+    transition: all ease-in-out 0.3s;
+    display: block;
+    &.show {
+      transform: translate(0px, 34px) scale(1) !important;
+    }
+    &:after {
+      content: '';
+      border-bottom: 10px solid $white;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      position: absolute;
+      bottom: 100%;
+      right: 5px;
+      margin-bottom: -1px;
+    }
+    &:before {
+      content: '';
+      border-bottom: 10px solid #d8d8d8;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      position: absolute;
+      bottom: 100%;
+      right: 5px;
+    }
+    .dropdown-item {
+      padding: 5px 10px;
+      a {
+        color: #212529;
+        display: block;
+        text-decoration: none;
+      }
+      i {
+        min-width: 15px;
+        color: $gray-text;
+        text-align: center;
+        margin-right: 5px;
+      }
+      &.active {
+        background-color: $secondary;
+        color: $white !important;
+        i {
+          color: $white;
+        }
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        background: $secondary;
+        color: $white !important;
+        i {
+          color: $white;
+        }
+        a {
+          color: $white;
+        }
+      }
+    }
+  }
+}

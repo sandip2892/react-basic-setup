@@ -1,0 +1,93 @@
+// Column Count
+@mixin column-count($count) {
+  -webkit-column-count: $count;
+  -moz-column-count: $count;
+  column-count: $count;
+}
+
+// Column Gap
+@mixin column-gap($gap) {
+  -webkit-column-gap: $gap;
+  -moz-column-gap: $gap;
+  column-gap: $gap;
+}
+
+// Media Query Max-Width
+@mixin max-width($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+// Media Query Min-Width
+@mixin min-width($size) {
+  @media (min-width: $size + 1px) {
+    @content;
+  }
+}
+
+// Position
+@mixin abs-pos(
+  $top: $top,
+  $right: $right,
+  $bottom: $bottom,
+  $left: $left,
+  $position: $position
+) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: $position;
+}
+
+// Box Shadow
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $size $color;
+    -moz-box-shadow: inset $top $left $blur $size $color;
+    box-shadow: inset $top $left $blur $size $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $size $color;
+    -moz-box-shadow: $top $left $blur $size $color;
+    box-shadow: $top $left $blur $size $color;
+  }
+}
+
+// Fonts Size
+@mixin font-size($sizeValue: 1.6) {
+  font-size: $sizeValue + rem;
+  font-size: ($sizeValue * 10) + px;
+}
+
+// Transform
+@mixin transform($transform...) {
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  -ms-transform: $transform;
+  -webkit-transform: $transform;
+  transform: $transform;
+}
+
+@mixin rotate($rotate...) {
+  -moz-transform: rotate($rotate);
+  -o-transform: rotate($rotate);
+  -ms-transform: rotate($rotate);
+  -webkit-transform: rotate($rotate);
+  transform: rotate($rotate);
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}

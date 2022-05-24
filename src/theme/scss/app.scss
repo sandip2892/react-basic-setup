@@ -1,0 +1,19 @@
+// BootStrap :BEGIN
+@import '~bootstrap/scss/bootstrap';
+
+// HELPER :BEGIN
+@import 'helper/variables';
+@import 'helper/extend';
+@import 'helper/mixin';
+@import 'helper/default';
+
+// LAYOUT :BEGIN
+@import 'layout/header';
+@import 'layout/leftmenu';
+// @import 'layout/footer';
+
+// PAGES :BEGIN
+// @import 'layout/index';
+@import 'layout/login';
+// @import 'layout/buyer-list';
+// @import 'layout/campaign-management';

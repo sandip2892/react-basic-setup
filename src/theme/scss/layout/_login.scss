@@ -1,0 +1,197 @@
+.login-body {
+  min-height: 100vh;
+  @extend .flex, %align-center, %justify-center;
+}
+.login-main {
+  @extend .flex;
+  margin: 30px auto;
+  padding: 0;
+  max-width: 1100px;
+  width: 90%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 2px 2px 4px 2px #00000017;
+  .logo {
+    // width: 240px;
+    margin: 0px -20px 20px 0;
+    display: block;
+    text-align: right;
+  }
+  @include max-width($sm) {
+    max-width: 90%;
+    width: 100%;
+  }
+  @include max-width($xxs) {
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+}
+.login-box {
+  border-radius: 0;
+  padding: 30px 40px 80px;
+  min-width: 450px;
+  width: 50%;
+  background-color: $white;
+  color: $primary;
+  position: relative;
+  @include max-width($md) {
+    min-width: 350px;
+  }
+  @include max-width($sm) {
+    padding-bottom: 120px;
+    width: 100%;
+    min-width: inherit;
+  }
+  @include max-width($xs) {
+    // max-width: calc(100% - 30px);
+    // padding: 24px 20px;
+  }
+  // a {
+  //     color: $secondary;
+  // }
+  h3 {
+    font-weight: 600;
+    font-size: 30px;
+    width: 100%;
+    text-align: left;
+    color: $primary;
+    margin: 0 0 40px;
+  }
+  h5 {
+    font-size: 14px;
+  }
+  hr {
+    margin: 8px 0px;
+  }
+  .login-form {
+    label {
+      font-size: 18px;
+      left: 20px;
+      top: 26px;
+      color: $gray-text;
+    }
+    .input-icon {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 24px;
+      // color: $secondary;
+      color: $primary;
+    }
+    .p-float-label {
+      margin-bottom: 25px;
+      .p-inputtext {
+        display: block;
+        width: 100%;
+        border-radius: 5px;
+        padding: 15px !important;
+        background: $light-graybg;
+        border-color: $light-graybg;
+        &:focus {
+          box-shadow: none;
+          background-color: $white;
+          border-color: $secondary;
+          & ~ label {
+            top: 2px;
+            background-color: $white;
+            padding: 0 5px;
+            left: 15px;
+            color: $secondary;
+          }
+        }
+        &.p-filled {
+          background-color: $white !important;
+          border-color: $secondary;
+          & ~ label {
+            top: 2px;
+            background-color: $white;
+            padding: 0 5px;
+            left: 15px;
+            color: $secondary;
+          }
+        }
+      }
+    }
+    button {
+      width: 100%;
+      font-size: 16px;
+      justify-content: center;
+      .p-button-label {
+        flex: inherit;
+      }
+    }
+    // .form-group {
+    //     margin-bottom: 6px;
+    //     @include max-width($xs) {
+    //         margin-bottom: 10px;
+    //     }
+    // }
+    label {
+      // margin-bottom: 0px;
+      @extend .flex, %align-center;
+
+      a {
+        margin-left: auto;
+        font-size: 10px;
+        font-weight: normal;
+      }
+    }
+    .forgot-link {
+      font-size: 12px;
+      color: $primary;
+    }
+    .form-control {
+      // height: 27px;
+      // border-color: $text-color;
+      // border-radius: 2px;
+      // @include max-width($xs) {
+      //     height: 35px;
+      // }
+    }
+  }
+  .btn-section {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    right: 40px;
+    p {
+      a {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.login-right {
+  // max-width: 655px;
+  // min-width:250px ;
+  width: 50%;
+  // height: 750px;
+  min-height: 620px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover !important;
+  @extend .flex, %align-center, %justify-center;
+  @include max-width($sm) {
+    display: none;
+  }
+  .login-img {
+    img {
+      max-width: none;
+    }
+  }
+  .login-link-text {
+    position: absolute;
+    bottom: 30px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    color: $white;
+    a {
+      font-weight: 600;
+      font-size: 20px;
+      color: lighten($secondary, 20%);
+    }
+  }
+}

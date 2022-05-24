@@ -1,0 +1,36 @@
+// Fonts
+$primary-font: 'Inter', sans-serif;
+// $font-icon : 'custom-font-icon';
+
+// Color
+$primary: #031c2b; //#1C1C1C; #222d32
+$secondary: #1da6dd;
+// $secondary-light:#318BB6; //#4da6dd; // #337ab7
+$light-graybg: #f5f5f5;
+$text-color: #aaaaaa;
+$light-text: #dfdfdf;
+$gray-text: #8a9ba8;
+$border-color: #aeaeae;
+$border-light: #ececec;
+$dark-text: #41474c;
+
+$background-color: #f2f1f1;
+$success: #5b9560;
+$warning: #dd7f44;
+$pending: #f4c417;
+$complete: #6aac28;
+
+// Basic Colors
+$black: #000;
+$white: #fff;
+
+$no-color: transparent;
+
+// Media-Queries
+$xl: 1300px;
+$lg: 1200px;
+$md: 991px;
+$sm: 767px;
+$xs: 575px;
+$xxs: 480px;
+$xxxs: 380px;
